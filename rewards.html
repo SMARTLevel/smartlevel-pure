@@ -13,6 +13,12 @@ var finalcost = 40000;
 var nintendocost = 50000;
 var maddencost = 35000;
 var batmancost = 25000;
+var avengerscost = 15000;
+var gamestopcost = 30000;
+var amazoncost = 40000;
+var targetcost = 40000;
+var harkinscost = 35000;
+var starbuckscost = 25000;
 
 function checkCOD()
 {
@@ -20,6 +26,7 @@ function checkCOD()
   {
     alert("Congrats on your new COD gear!")
     smartpoints = smartpoints - codcost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
 
   }
   else
@@ -32,6 +39,7 @@ function checksonic()
   {
     alert("Congrats on your new Sonic gear!")
     smartpoints = smartpoints - soniccost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
       
   }
   else
@@ -44,6 +52,7 @@ function checkfinal()
   {
     alert("Congrats on your new Final Fantasy gear!")
     smartpoints = smartpoints - finalcost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
   }
   else
     alert("Sorry, you do not have enough SmartPoints for that!")
@@ -55,7 +64,8 @@ function checknintendo()
   {
     alert("Congrats on your new Nintendo gear!")
     smartpoints = smartpoints - nintendocost;
-    printscore();
+    //printscore();
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
   }
   else
     alert("Sorry, you do not have enough SmartPoints for that!")
@@ -67,6 +77,7 @@ function checkmadden()
   {
     alert("Congrats on your new Madden gear!")
     smartpoints = smartpoints - maddencost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
   }
   else
     alert("Sorry, you do not have enough SmartPoints for that!")
@@ -78,13 +89,92 @@ function checkbatman()
   {
     alert("Congrats on your new Batman gear!")
     smartpoints = smartpoints - batmancost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+
+
   }
   else
     alert("Sorry, you do not have enough SmartPoints for that!")
 }
 
 
-document.write('<p> You have ' + smartpoints + ' to spend </p>' );
+document.writeln('<p id="score"> You have ' + smartpoints + ' to spend </p>' );
+
+function checkavengers()
+{
+  if (smartpoints >= avengerscost)
+  {
+    alert("Congrats on your new Avengers Gear!")
+    smartpoints = smartpoints - avengerscost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+
+  }
+  else
+    alert("Sorry, you do not have enough SmartPoints for that!")
+}
+
+function checkgamestop()
+{
+  if (smartpoints >= gamestopcost)
+  {
+    alert("Congrats on your new GameStop Card!")
+    smartpoints = smartpoints - gamestopcost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+      
+  }
+  else
+    alert("Sorry, you do not have enough SmartPoints for that!")
+}
+
+function checkamazon()
+{
+  if (smartpoints >= amazoncost)
+  {
+    alert("Congrats on your new Amazon Card!")
+    smartpoints = smartpoints - amazoncost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+  }
+  else
+    alert("Sorry, you do not have enough SmartPoints for that!")
+}
+
+function checktarget()
+{
+  if (smartpoints >= targetcost)
+  {
+    alert("Congrats on your new Target Card!")
+    smartpoints = smartpoints - targetcost;
+    //printscore();
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+  }
+  else
+    alert("Sorry, you do not have enough SmartPoints for that!")
+}
+
+function checkharkins()
+{
+  if (smartpoints >= harkinscost)
+  {
+    alert("Congrats on your two(2) Harkins Tickets!")
+    smartpoints = smartpoints - harkinscost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+  }
+  else
+    alert("Sorry, you do not have enough SmartPoints for that!")
+}
+
+function checkstarbucks()
+{
+  if (smartpoints >= starbuckscost)
+  {
+    alert("Congrats on your new Starbuscks Card!")
+    smartpoints = smartpoints - starbuckscost;
+    document.getElementById("score").innerHTML = 'You have ' + smartpoints + ' to spend';
+  }
+  else
+    alert("Sorry, you do not have enough SmartPoints for that!")
+}
+
 </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -170,8 +260,8 @@ document.write('<p> You have ' + smartpoints + ' to spend </p>' );
     *width: 0%;
   }
 
-      .span4 {clear: both;
-              border: thick black solid;
+      .span2 {font-size:large;
+              border: thin solid black;
               text-align: center;    
       }
     </style>
@@ -191,73 +281,7 @@ document.write('<p> You have ' + smartpoints + ' to spend </p>' );
   </head>
 
   <body>
- <div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '588131821220447', // App ID
-    channelUrl : '9f7fbf546966f86ae9e444f26c48f6d4', // Channel File
-    status     : true, // check login status
-    cookie     : true, // enable cookies to allow the server to access the session
-    xfbml      : true  // parse XFBML
-  });
 
-  // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
-  // for any authentication related change, such as login, logout or session refresh. This means that
-  // whenever someone who was previously logged out tries to log in again, the correct case below 
-  // will be handled. 
-  FB.Event.subscribe('auth.authResponseChange', function(response) {
-    // Here we specify what we do with the response anytime this event occurs. 
-    if (response.status === 'connected') {
-      // The response object is returned with a status field that lets the app know the current
-      // login status of the person. In this case, we're handling the situation where they 
-      // have logged in to the app.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // In this case, the person is logged into Facebook, but not into the app, so we call
-      // FB.login() to prompt them to do so. 
-      // In real-life usage, you wouldn't want to immediately prompt someone to login 
-      // like this, for two reasons:
-      // (1) JavaScript created popup windows are blocked by most browsers unless they 
-      // result from direct interaction from people using the app (such as a mouse click)
-      // (2) it is a bad experience to be continually prompted to login upon page load.
-      FB.login();
-    } else {
-      // In this case, the person is not logged into Facebook, so we call the login() 
-      // function to prompt them to do so. Note that at this stage there is no indication
-      // of whether they are logged into the app. If they aren't then they'll see the Login
-      // dialog right after they log in to Facebook. 
-      // The same caveats as above apply to the FB.login() call here.
-      FB.login();
-    }
-  });
-  };
-
-  // Load the SDK asynchronously
-  (function(d){
-   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/en_US/all.js";
-   ref.parentNode.insertBefore(js, ref);
-  }(document));
-
-  // Here we run a very simple test of the Graph API after login is successful. 
-  // This testAPI() function is only called in those cases. 
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Good to see you, ' + response.name + '.');
-    });
-  }
-</script>
-
-<!--
-  Below we include the Login Button social plugin. This button uses the JavaScript SDK to
-  present a graphical Login button that triggers the FB.login() function when clicked.
-
-  Learn more about options for the login button plugin:
-  /docs/reference/plugins/login/ -->
     <div class="container">
 
       <div class="masthead">
@@ -266,9 +290,15 @@ document.write('<p> You have ' + smartpoints + ' to spend </p>' );
         <tr><td><h3 class="muted">SMARTlevel</h3> 
         <div class="span6">
         </td><td>
-
+        <form class="form-inline">
         <div class="span6">
-    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+ 		<input type="text" class="input-small" placeholder="Email">
+	    <input type="password" class="input-small" placeholder="Password">
+ 	    <label class="checkbox">
+        <input type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="btn">Sign in</button>
+        </form>
         </td></tr>
         </table>
           
@@ -300,42 +330,45 @@ document.write('<p> You have ' + smartpoints + ' to spend </p>' );
       <div class="row-fluid">
 
 
-        <div class="span4">
+        <div class="span2">
           <h2>Call of Duty Map</h2>
           <img src="callofduty.jpg">
           <p>Cost 15000 Points</p>
           <p><a onclick="checkCOD()" class="btn" href="#">Purchase &raquo;</a></p>
         </div>
 
-        <div class="span4">
+        <div class="span2">
           <h2>Batman</h2>
           <img src="batman.jpg">
           <p>Cost 25000 Points</p>
            <p><a onclick="checkbatman()" class="btn" href="#">Purchase &raquo;</a></p>
         </div>
 
-        <div class="span4">
+        <div class="span2">
           <h2>Sonic</h2>
           <img src="sonic.jpg">
           <p>Cost 30000 Points</p>
-          <p><a onclick="checksonic()"class="btn" href="#">Purchase &raquo;</a></p>
+          <p><a onclick="checksonic()" class="btn" href="#" >Purchase &raquo;</a></p>
         </div>
 
-       <div class="span4">
+
+
+
+       <div class="span2">
           <h2>Final Fantasy</h2>
           <img src="finalfantasy.jpg">
           <p>Cost 40000 Points</p>
           <p><a onclick="checkfinal()"class="btn" href="#">Purchase &raquo;</a></p>
         </div>
 
-        <div class="span4">
+        <div class="span2">
           <h2>Nintendo</h2>
           <img src="nintendo.jpg">
           <p>Cost 50000 Points</p>
          <p><a onclick="checknintendo()"class="btn" href="#">Purchase &raquo;</a></p>
         </div>
 
-        <div class="span4">
+        <div class="span2">
           <h2>Madden NFL</h2>
           <img src="madden.jpg">
           <p>Cost 35000 Points</p>
@@ -347,8 +380,64 @@ document.write('<p> You have ' + smartpoints + ' to spend </p>' );
       </div>
 
       <hr>
+      <tr>
+        <div class="row-fluid">
 
 
+        <div class="span2">
+          <h2>Avengers</h2>
+          <img src="Avengers.jpg">
+          <p>Cost 15000 Points</p>
+          <p><a onclick="checkavengers()" class="btn" href="#">Purchase &raquo;</a></p>
+        </div>
+
+        <div class="span2">
+          <h2>Game stop</h2>
+          <img src="GameStop.jpg">
+          <p>Cost 25000 Points</p>
+           <p><a onclick="checkgamestop()" class="btn" href="#">Purchase &raquo;</a></p>
+        </div>
+
+        <div class="span2">
+          <h2>Amazon</h2>
+          <img src="Amazon_logo.jpg">
+          <p>Cost 30000 Points</p>
+          <p><a onclick="checkamazon()"class="btn" href="#">Purchase &raquo;</a></p>
+        </div>
+
+       <div class="span2">
+          <h2>Target</h2>
+          <img src="Target.jpg">
+          <p>Cost 40000 Points</p>
+          <p><a onclick="checktarget()"class="btn" href="#">Purchase &raquo;</a></p>
+        </div>
+
+        <div class="span2">
+          <h2>Harkins</h2>
+          <img src="Harkins.jpg">
+          <p>Cost 50000 Points</p>
+         <p><a onclick="checkharkins()"class="btn" href="#">Purchase &raquo;</a></p>
+        </div>
+
+        <div class="span2">
+          <h2>Star bucks</h2>
+          <img src="starbucks.jpg">
+          <p>Cost 35000 Points</p>
+         <p><a onclick="checkstarbucks()"class="btn" href="#">Purchase &raquo;</a></p>
+        </div>
+
+
+
+      </div>
+
+
+
+      </tr>
+      <hr>
+
+         <div class="footer">
+          <p>&copy; SmartLevel</p>
+        </div>
 
     </div> <!-- /container -->
 

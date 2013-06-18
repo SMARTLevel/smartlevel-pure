@@ -97,8 +97,73 @@
   </head>
 
   <body>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '588131821220447', // App ID
+    channelUrl : '9f7fbf546966f86ae9e444f26c48f6d4', // Channel File
+    status     : true, // check login status
+    cookie     : true, // enable cookies to allow the server to access the session
+    xfbml      : true  // parse XFBML
+  });
 
-  
+  // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
+  // for any authentication related change, such as login, logout or session refresh. This means that
+  // whenever someone who was previously logged out tries to log in again, the correct case below 
+  // will be handled. 
+  FB.Event.subscribe('auth.authResponseChange', function(response) {
+    // Here we specify what we do with the response anytime this event occurs. 
+    if (response.status === 'connected') {
+      // The response object is returned with a status field that lets the app know the current
+      // login status of the person. In this case, we're handling the situation where they 
+      // have logged in to the app.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // In this case, the person is logged into Facebook, but not into the app, so we call
+      // FB.login() to prompt them to do so. 
+      // In real-life usage, you wouldn't want to immediately prompt someone to login 
+      // like this, for two reasons:
+      // (1) JavaScript created popup windows are blocked by most browsers unless they 
+      // result from direct interaction from people using the app (such as a mouse click)
+      // (2) it is a bad experience to be continually prompted to login upon page load.
+      FB.login();
+    } else {
+      // In this case, the person is not logged into Facebook, so we call the login() 
+      // function to prompt them to do so. Note that at this stage there is no indication
+      // of whether they are logged into the app. If they aren't then they'll see the Login
+      // dialog right after they log in to Facebook. 
+      // The same caveats as above apply to the FB.login() call here.
+      FB.login();
+    }
+  });
+  };
+
+  // Load the SDK asynchronously
+  (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/en_US/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
+
+  // Here we run a very simple test of the Graph API after login is successful. 
+  // This testAPI() function is only called in those cases. 
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Good to see you, ' + response.name + '.');
+    });
+  }
+</script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses the JavaScript SDK to
+  present a graphical Login button that triggers the FB.login() function when clicked.
+
+  Learn more about options for the login button plugin:
+  /docs/reference/plugins/login/ -->
     <div class="container">
 
       <div class="masthead">
@@ -107,15 +172,9 @@
         <tr><td><h3 class="muted">SMARTlevel</h3> 
         <div class="span6">
         </td><td>
-        <form class="form-inline">
+
         <div class="span6">
- 		<input type="text" class="input-small" placeholder="Email">
-	    <input type="password" class="input-small" placeholder="Password">
- 	    <label class="checkbox">
-        <input type="checkbox"> Remember me
-        </label>
-        <button type="submit" class="btn">Sign in</button>
-        </form>
+    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
         </td></tr>
         </table>
         
@@ -127,7 +186,7 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="lessons.html">Lessons</a></li>
                 <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li class="active"><a href="friends.html">Friends</a></li>
+                <li class="active"><a href="friends.html">About Us</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
               </ul>
             </div>
@@ -137,9 +196,7 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Level Up!</h1>
-        <p class="lead">Bring your school skills and get real-life rewards. Sign up to</p>
-        <a class="btn btn-large btn-success" href="#">Get started today</a>
+        <h1>About the SmartLevel Team</h1>
       </div>
 
       <hr>
@@ -147,26 +204,77 @@
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Jesse Klein</h2>
+          <img src="Jesse.jpg">
+          <p>Jesse was born into a remote Nigerian tribe of stranded Hebrew missionaries. Until his relocation to the US in 2004, he had never eaten conventional 
+food, and lived solely off of edible wild grasses and his own hair. He was inspired to start programming after watching the 1999 Disney classic "Smart House"
+and is now well versed in HTML5 and C++ coding. </p>
+          
         </div>
+
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Danielle Ripepi</h2>
+          <img src="Danielle.jpg">
+          <p>As a young lady, Danielle was a very promising opera singer. Unfortunately, her hopes of stardom were dashed in 1999 when she mistook a bottle of 
+ether for mineral water, and effectively ended her singing career. She soon took and interest in computer programming, a field in which vocal socialization 
+can be minimal. She plays a vital role for our team, and makes sure to clearly label all liquids in and around the office.
+
+ </p>
+          
        </div>
+
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Michelle Smekal</h2>
+          <img src="Michelle.jpg">
+          <p>Born the heiress to the "fruit-on-the-bottom" yogurt fortune, Michelle enjoyed a privileged childhood. Despite a successful international fencing
+career, her true passion lies in the field of computer programming. Her web design pedigree is distinguished and constantly expanding. She currently lives
+at her summer home in the Berkshires, where she breeds prize-winning Corgis and maintains the world's second-largest collection of Edwardian utility bills.
+
+</p>
+          
         </div>
       </div>
 
       <hr>
+      <tr>
+
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>Tyler Geske</h2>
+          <img src="Tyler.jpg">
+          <p> After winning a high-dollar malpractice suit against his eye doctor in 2005, Tyler dropped out of Jr High school to pursue a life of doing nothing.
+He made national news in 2007 when he filled a swimming pool with pudding, attempted to swim in it, and very nearly drowned. Since then, he has taken an 
+interest in watching other people write code, and has had a successful career in doing so. </p>
+          
+        </div>
+
+        <div class="span4">
+          <h2>Matthew Burns</h2>
+          <img src="Matt.jpg">
+          <p>Until the summer of 1996, Matt did not technically exist. Due to a hospital error shortly after his birth, he was never given a Social Security number 
+or an official name until the problem was edified due to an IRS audit. After high school, he worked from 2001-2005 as the touring keyboardist for the Allman 
+Brothers, after which he gave up his music career to pursue computer science. He has forged a successful software development career, and will still play you 
+a song every once in a while if you ask him nicely.</p>
+          
+       </div>
+
+        <div class="span4">
+          <h2>Nathan Cole</h2>
+          <img src="Nathan.jpg">
+          <p>Nathan is the current world record holder for the most chocolate covered cherries eaten in a single minute, at 44. Riding the wave of this fame and an 
+incredible natural talent for programming, he was able to make ground-level contacts at industry giants such as Travelocity.com and Paypal, amongst countless 
+others. Along with occasional freelance coding work, Nathan is pursuing his second world record: the most blindfolded full court basketball shots made in a 
+single minute. The record currently lies a 0.</p>
+          
+        </div>
+      </div>
+
+
+
+      </tr>  
 
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; SmartLevel</p>
       </div>
 
     </div> <!-- /container -->
