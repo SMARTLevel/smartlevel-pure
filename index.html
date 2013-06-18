@@ -97,7 +97,7 @@
   </head>
 
   <body>
-    <div id="fb-root"></div>
+ <div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
   FB.init({
@@ -174,7 +174,7 @@
         </td><td>
 
         <div class="span6">
- 		<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
         </td></tr>
         </table>
         
@@ -184,10 +184,10 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li><a href="home.html">Home</a></li>
-                <li class="active"><a href="index.html">Feed</a></li>
+                <li class="active"><a href="home.html">Home</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
                 <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="friends.html">Friends</a></li>
+                <li><a href="friends.html">About Us</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
               </ul>
             </div>
@@ -196,37 +196,54 @@
       </div>
 
       <!-- Jumbotron -->
+      
       <div class="jumbotron">
         <h1>Level Up!</h1>
         <p class="lead">Bring your school skills and get real-life rewards. Sign up to</p>
         <a class="btn btn-large btn-success" href="#">Get started today</a>
       </div>
+		
+		 <canvas id="myCanvas" width="1000" height="537"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var x = 45;
+      var y = 0;
+      var width = 900;
+      var height = 537;
+      var imageObj = new Image();
 
+      imageObj.onload = function() {
+        context.drawImage(imageObj, x, y, width, height);
+      };
+      imageObj.src = 'http://2.bp.blogspot.com/_rmNKEbx2ce4/S_tasaUb40I/AAAAAAAAAAk/Q5UlNAYem10/s1600/kids_reading_pic75912262-768x512.jpg';
+    </script>
+	
+		
       <hr>
 
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
           <h2>Learning is Fun</h2>
-          <p>School can be boring and cumbersome, but with SMARTlevel's new curriculum design we have made learning fun and rewarding. By teaming up with teachers we have allowed valuable learning to take place and gives students the skills to succeed in life! /p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>School can be boring and cumbersome, but with SMARTlevel's new curriculum design we have made learning fun and rewarding. By teaming up with teachers we have allowed valuable learning to take place and gives students the skills to succeed in life! </p>
         </div>
         <div class="span4">
           <h2>Be the Best</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>With an always online network, you will be able to compete with classmates and friends. A tracker system will show which one of you has completed a section in curriculum along with, who has purchased a reward! </p>
+
        </div>
         <div class="span4">
           <h2>Earn Rewards</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>SMARTlevel has teamed up with some of the biggest game publishers in the business and offer in game rewards for accumulating points. This puts a whole new spin on learning which makes it more fun and rewarding. </p>
         </div>
       </div>
 
       <hr>
+      
 
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; SMARTlevel 2013</p>
       </div>
 
     </div> <!-- /container -->
