@@ -51,6 +51,10 @@
         margin-top: 28px;
       }
 
+/*      p { background-color:#0000FF;
+
+      }*/
+
 
       /* Customize the navbar links to be fill the entire space of the .navbar */
       .navbar .navbar-inner {
@@ -96,7 +100,8 @@
                                    <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.png">
   </head>
 
-  <div id="fb-root"></div>
+  <body>
+<div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
   FB.init({
@@ -190,44 +195,443 @@
               </ul>
             </div>
           </div>
-        </div><!-- /.navbar -->
+        </div>   <!-- /.navbar -->
+     
       </div>
 
       <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Level Up!</h1>
-        <p class="lead">Bring your school skills and get real-life rewards. Sign up to</p>
-        <a class="btn btn-large btn-success" href="#">Get started today</a>
-      </div>
+
 
       <hr>
 
       <!-- Example row of columns -->
-      <div class="row-fluid">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+       <div  class="span12"> 
+        <div class="span12">
+
+          <h1 style="text-align: center"> See How YOU Level Up!</h1>
+          <p> 
+
+
+<!--         <div class="row-fluid">-->
+        <div id= "6th Graders" class="span3">
+          <h2>6th Graders</h2>
+          <p>
+
+</p>
+</div>
+
+
+
+        <div id= "7th Graders" class="span3">
+          <h2>7th Graders</h2>
+          <p>
+
+          </p>
+        </div>
+
+
+
+
+      <div id= "8th Graders" class="span3">
+          <h2>8th Graders</h2>
+          <p>
+
+          </p>
+        </div> 
+
+
+
+</hr>
+
+
+        <script>
+
+
+
+        var users = [
+      
+           "obamasMama",
+                   "u_cantseeeMEEE",                   "belieber4lyfe",
+                   "bellydancaaaa",                   "YOUR_MOM_SAYS",                   "pinkLADY",                   "ballerina91",
+                   "GoneFishenn",                   "bluewhales",                   "cheetahrunner",                   "hannahbanana",
+                   "ieatkids",                   "iScratch",                   "uSniff",                   "IMnotTOUCHINGyou",
+                   "IronMan22",                   "Thorrrr",                   "Captain_MURRICA",                   "snorlaximusprime",
+                   "gameJUNKY86",                   "Johhny5",                   "catricks45",                   "meesh",
+                   "cheezluver",                   "smarty2000",         
+                   "chunkymonkeeee",                   "kingchronos","softcuddlyman","summerthyme",
+"rodeopuppy","susanny","yeezus153","stepdan",
+"thefullmonty","garretpeach","kidbroadway","sharkfight",
+"gingerbinger","freeatlast",
+"broadcaster50","baconnotstirred",
+"tacohell","carefreeorphan",
+"truckface","knotranger",
+"esquire55","gfullerton",
+"freddytava","ridethetiger",
+"tadeo1949","kittensonfire",
+"crescenthonkey","avacadoassassin",
+"funkyharrold","biscuitwench",
+"feloniousmonk","captainbuffy",
+"onearmeddwarf","gigglypersian",
+"rwandaphobic","riprihanna",
+"celticwoof","hambone",
+"necessarymeans","sobchaksecurity",
+"tweetmegently","shredsitar",
+"zippoviking","lovestock",
+"theycallmedennis",
+"sibilance","freehat",
+"freshczar","phoneticjustice",
+"madskunky","clownmatrix",
+"agdumble","skizzler",
+"ihavediabetes","preasureplivelege" ,
+"kingdavid724","rougewafflemaker",
+"thermokat","benjamincuttin",
+"soundingpointe",
+"thecubslostagain",
+"dzelonky",
+"stratotone",
+"lutherplayedtheboogie",
+"hopalongryan",
+"kittysezmeowww",
+"brickofcheese",
+"ranchaholic",
+"spincycle",
+"fangletinker",
+"doughnutssgonuts",
+"codchancellor",
+"ihadarash",
+"robojimmy",
+"cowboydan",
+"buckocaster",
+"therichestdon",
+"nos12ay7",
+"tonestack",
+"spuffyjoe",
+"weathervanesalesman",
+"49studebaker",
+"alrokerfanboy",
+"mandiego",
+"rooseveltdime",
+"spiffymcbrownshoes",
+"dualprofessional",
+"biginjapan",
+"notnowmom",
+"avemaria",
+"soccerdogg",
+"leadpaintbaby",
+"lucinda",
+"confypoplar",
+"drjulius",
+"iwenttoartschool",
+"tacticalsloth",
+"chocolatejesus",
+"danamarschz",
+"breakingtad",
+"drugsontoast",
+"loubergs",
+"kiwislice",
+"ameliaeartart",
+"lemonlimewtf",
+"tonyhop",
+"beanswithchee",
+"bjorksucks",
+"illbestan",
+"geebreeze",
+"shooshoe",
+"jesusabs",
+"frontierphysicist",
+"yourbiggestflan",
+"creepyolderman",
+"flanthropist",
+"wackjilshire",
+"montecrisco",
+"napoleonbeard",
+"squattingbearapproves",
+"senortadpole",
+"steveholt",
+"genghislawn",
+"ancientraike",
+"steptothewoo",
+"checkforlumps",
+"smugvegan",
+"zerotalenthack",
+"robertofripp",
+"inky",
+"pinky",
+"blinky",
+"sue",
+"suprozinky",
+"buffhomeless",
+"pelicansdontvote",
+"tweeddeluxe",
+"leeharveyoddball"
+
+               ]
+
+          var scores = [
+          50, 51, 52,53, 54, 55,     56,  57,   58,   59,60,   61,          62,          63,          64,          65,          66,          67,          68,          69,          70,          71,          72,          73,          74,          75,          76,          77,          78,          79,          80,          81,          82,          83,          84,
+          85,          86,          87,          88,          89,          90,          91,          92,          93,          94,          95,          96,          97,          98,          99,
+          100,          95,          92,          85,          99,          91,          90,          99,
+          98,          97,
+          ]
+
+  var exams = [
+          "Arithmatic",
+          "Algebra",
+          "Geometry",
+          "Biology",
+          "Chemistry",
+          "Physics",
+          "HTML5",
+          "Java",
+          "C++"
+  ]
+
+  var testno = [ 1, 2, 3, 4, 5, 6,7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+
+  var gradelevel = ["6th grade", "7th grade", "8th grade"]
+
+            Math.random();
+            var randomNum1 = Math.floor(Math.random()*users.length);
+
+            Math.random();
+            var randomNum2 = Math.floor(Math.random()*users.length);
+
+            Math.random();
+            var randomNum3 = Math.floor(Math.random()*50 + 50);
+
+            Math.random();
+            var randomNum4 = Math.floor(Math.random()*users.length);
+
+            Math.random();
+            var randomNum5 = Math.floor(Math.random()*users.length);
+
+            Math.random();
+            var randomNum6 = Math.floor(Math.random()*users.length);
+
+            Math.random();
+            var randomNum7 = Math.floor(Math.random()*50 + 50);
+
+
+            Math.random();
+            var randomNum8 = Math.floor(Math.random()*50 + 50);
+
+            Math.random();
+            var randomNum9 = Math.floor(Math.random()*50 + 50);
+
+
+            Math.random();
+            var randomNum10 = Math.floor(Math.random()*10 + 1);
+
+            Math.random();
+            var randomNum11 = Math.floor(Math.random()*users.length);
+
+            var userzero= users[randomNum6]
+            var userone= users[randomNum1]
+            var usertwo= users[randomNum2]
+            var userthree= users[randomNum4]
+            var userfour= users[randomNum5]
+            var userfive= users[randomNum11]
+
+            var colors=[ "green", "blue", "purple", "red", "black", "orange", "cyan"
+
+            ]
+
+
+
+            function printscores()
+
+{
+ // <div class="span12">
+ 
+
+          //<
+       document.getElementById("6th Graders").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor("purple") + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+
+
+//h1 style="text-align: center"> printout </h1>
+     //     <p> 
+//
+}
+
+            function printscores7()
+
+{
+ // <div class="span12">
+ 
+
+          //<
+       document.getElementById("7th Graders").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor("blue") + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+
+
+//h1 style="text-align: center"> printout </h1>
+     //     <p> 
+//
+}
+
+            function printscores8()
+
+{
+ // <div class="span12">
+ 
+
+          //<
+       document.getElementById("8th Graders").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor("green") + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+
+//h1 style="text-align: center"> printout </h1>
+     //     <p> 
+//
+}
+/// inside a div getelementbyid(idyougivethediv).innerHTML+="everythingin the document.write"
+
+
+        //<div class="span12">
+
+     //     <h1 style="text-align: center"> printout</h1>
+         
+
+
+//h1 style="text-align: center"> printout </h1>
+     //     <p> 
+
+/*      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) 
+
+      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) 
+
+      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) 
+
+      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) */
+
+
+
+
+
+
+
+
+
+
+
+//            function reloadPage()
+  //          {
+    //         location.reload()
+      //      }
+
+
+ //         function jQuery(#sixthgraders).load
+
+
+
+ //           window.setTimeout(reloadPage(),30000);   works but does it waaay too fast
+  //        function jQuery.reload(sixthgraders)
+ //         setTimeout(jQuery('#sixthgraders').load(),3000,JScript)
+
+
+ //         jQuery('#questions').load('/some_url #questions > *');
+
+
+            //^^this creates a time delay between 0.5 to 3 seconds
+
+ var counter = 0;
+ 
+ if (counter < 50)
+ {           
+
+
+      var myVar=setTimeout(function(){myTimer()},Math.floor(Math.random()*2500) + 500);
+
+             function myTimer()
+             {
+               if (counter < 20)
+               {
+               printscores()
+               printscores7()
+               printscores8()
+               setTimeout(function(){myTimer()},Math.floor(Math.random()*2500) + 500);
+
+               counter=counter +1;
+             }
+             }
+
+
+}
+
+
+/*            function myTimer()
+            {
+             var uzone=document.getElementById(userone);
+             uzone.innerHTML=userzero;
+
+             var uztwo=document.getElementById(usertwo);
+             uztwo.innerHTML=userone;
+             
+             var uzthree=document.getElementById(userthree);
+             uzthree.innerHTML=usertwo;
+             
+             var uzfour=document.getElementById(userfour);
+             uzfour.innerHTML=userthree;
+             
+             var uzfive=document.getElementById(userfive);
+             uzfive.innerHTML="userfour";
+            }*/
+                    
+
+
+
+          
+
+        </script>
+      
+</hr>
+<!-- 
+
+          </p>
+
+
+
+
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
+
+        
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>7th Graders</h2>
+          <p>
+
+
+
+
+           </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <h2>8th Graders</h2>
+          <p>
+
+
+
+          </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
 
       <hr>
+ -->
 
-      <div class="footer">
-        <p>&copy; Company 2013</p>
-      </div>
+     <hr>
+<!-- <div class="footer">
+        <p>&copy; SMARTlevel 2013</p>
+      </div> 
+</hr> -->
 
-    </div> <!-- /container -->
+<!-- <footer>
+  <p>SMARTlevel 2013</p>
+
+</footer> -->
+
+
+
+ <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
@@ -248,3 +652,5 @@
 
   </body>
 </html>
+
+
