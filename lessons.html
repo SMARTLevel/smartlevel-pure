@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  		<meta charset="utf-8" />
+  <title>jQuery UI Button - Split button</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <style>
+			.ui-menu { position: absolute; width: 100px; }
+		  </style>
+	 <script>
+		  $(function() {
+			$( "#rerun1" )
+			  .button()
+			  .click(function() {
+			  })
+			  .next()
+				.button({
+				  text: false,
+				  icons: {
+					primary: "ui-icon-triangle-1-s"
+				  }
+				})
+				.click(function() {
+				  var menu = $( this ).parent().next().show().position({
+					my: "left top",
+					at: "left bottom",
+					of: this
+				  });
+				  $( document ).one( "click", function() {
+					menu.hide();
+				  });
+				  return false;
+				})
+				.parent()
+				  .buttonset()
+				  .next()
+					.hide()
+					.menu();
+		  });
+  	</script>
+  	<script>
+		  $(function() {
+			$( "#rerun2" )
+			  .button()
+			  .click(function() {
+			  })
+			  .next()
+				.button({
+				  text: false,
+				  icons: {
+					primary: "ui-icon-triangle-1-s"
+				  }
+				})
+				.click(function() {
+				  var menu = $( this ).parent().next().show().position({
+					my: "left top",
+					at: "left bottom",
+					of: this
+				  });
+				  $( document ).one( "click", function() {
+					menu.hide();
+				  });
+				  return false;
+				})
+				.parent()
+				  .buttonset()
+				  .next()
+					.hide()
+					.menu();
+		  });
+  	</script>
+  	<script>
+		  $(function() {
+			$( "#rerun3" )
+			  .button()
+			  .click(function() {
+			  })
+			  .next()
+				.button({
+				  text: false,
+				  icons: {
+					primary: "ui-icon-triangle-1-s"
+				  }
+				})
+				.click(function() {
+				  var menu = $( this ).parent().next().show().position({
+					my: "left top",
+					at: "left bottom",
+					of: this
+				  });
+				  $( document ).one( "click", function() {
+					menu.hide();
+				  });
+				  return false;
+				})
+				.parent()
+				  .buttonset()
+				  .next()
+					.hide()
+					.menu();
+		  });
+  	</script>
+  
+  
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="bootstrap/js/bootstrap.js" rel="stylesheet">
+    <link href="bootstrap/css/prettify.css" rel="stylesheet">
+
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 60px;
+      }
+
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container > hr {
+        margin: 60px 0;
+      }
+
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+
+      /* Customize the navbar links to be fill the entire space of the .navbar */
+      .navbar .navbar-inner {
+        padding: 0;
+      }
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+      }
+      .navbar .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.png">
+                             
+                             
+                             
+                             
+                             
+                                   
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+      
+       <table>
+        <tr><td><h3 class="muted">SMARTlevel</h3> 
+        <div class="span6">
+        </td><td>
+        <form class="form-inline">
+        <div class="span6">
+ 		<input type="text" class="input-small" placeholder="Email">
+	    <input type="password" class="input-small" placeholder="Password">
+ 	    <label class="checkbox">
+        <input type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="btn btn-info">Sign in</button>
+        </form>
+        </td></tr>
+        </table>
+        
+        <p>
+        
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="lessons.html">Lessons</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="friends.html">Friends</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>Mathematics</h2>
+          <p>Advance your skills in Mathematics by starting in Arithmetic and working your way up to the mastery level of Trigonometry! </p>
+          <p><div>
+					<div>
+					   <button id="rerun1" class="btn btn-success">Start Here</button>
+					   <button id="select">Select an action</button>
+					</div>
+					 <ul>
+						 <li><a href="Arithmetic.html">Arithmetic</a></li>
+						  <li><a href="Algebra.html">Algebra</a></li>
+						  <li><a href="Geometry.html">Geometry</a></li>
+					 </ul>
+					</div>
+				</div> </p>
+        
+        
+        <div class="span4">
+          <h2>Science</h2>
+          <p>Learn the sciences of the world and become familiar with how things work! We offer courses in Chemistry, Biology and Physics. </p>
+          <div>
+					<div>
+					   <button id="rerun2" class="btn btn-success">Start Here</button>
+					   <button id="select">Select an action</button>
+					</div>
+					 <ul>
+						 <li><a href="Biology.html">Biology</a></li>
+						  <li><a href="Chemistry.html">Chemistry</a></li>
+						  <li><a href="Physics.html">Physics</a></li>
+					 </ul>
+					</div>
+				</div>
+       
+       
+        <div class="span4">
+          <h2>Technology</h2>
+          <p>Take your skills and apply them in Computer Science, where you will learn how to code a simple program and make the simple games.</p>
+			<p> <div>
+					<div>
+					   <button id="rerun3" class="btn btn-success">Start Here</button>
+					   <button id="select">Select an action</button>
+					</div>
+					 <ul>
+						 <li><a href="#">HTML5</a></li>
+						  <li><a href="#">Java</a></li>
+						  <li><a href="#">C++</a></li>
+					 </ul>
+					</div>
+			</div></p>
+ </div>
+		
+		
+		
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
