@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
+
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
@@ -16,7 +16,7 @@
         padding-bottom: 60px;
       }
 
-      /* Custom container */
+
       .container {
         margin: 0 auto;
         max-width: 1000px;
@@ -25,7 +25,7 @@
         margin: 60px 0;
       }
 
-      /* Main marketing message and sign up button */
+
       .jumbotron {
         margin: 80px 0;
         text-align: center;
@@ -43,7 +43,7 @@
         padding: 14px 24px;
       }
 
-      /* Supporting marketing content */
+
       .marketing {
         margin: 60px 0;
       }
@@ -51,12 +51,7 @@
         margin-top: 28px;
       }
 
-/*      p { background-color:#0000FF;
 
-      }*/
-
-
-      /* Customize the navbar links to be fill the entire space of the .navbar */
       .navbar .navbar-inner {
         padding: 0;
       }
@@ -87,12 +82,7 @@
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
 
-    <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
@@ -101,84 +91,24 @@
   </head>
 
   <body>
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '588131821220447', // App ID
-    channelUrl : '9f7fbf546966f86ae9e444f26c48f6d4', // Channel File
-    status     : true, // check login status
-    cookie     : true, // enable cookies to allow the server to access the session
-    xfbml      : true  // parse XFBML
-  });
 
-  // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
-  // for any authentication related change, such as login, logout or session refresh. This means that
-  // whenever someone who was previously logged out tries to log in again, the correct case below 
-  // will be handled. 
-  FB.Event.subscribe('auth.authResponseChange', function(response) {
-    // Here we specify what we do with the response anytime this event occurs. 
-    if (response.status === 'connected') {
-      // The response object is returned with a status field that lets the app know the current
-      // login status of the person. In this case, we're handling the situation where they 
-      // have logged in to the app.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // In this case, the person is logged into Facebook, but not into the app, so we call
-      // FB.login() to prompt them to do so. 
-      // In real-life usage, you wouldn't want to immediately prompt someone to login 
-      // like this, for two reasons:
-      // (1) JavaScript created popup windows are blocked by most browsers unless they 
-      // result from direct interaction from people using the app (such as a mouse click)
-      // (2) it is a bad experience to be continually prompted to login upon page load.
-      FB.login();
-    } else {
-      // In this case, the person is not logged into Facebook, so we call the login() 
-      // function to prompt them to do so. Note that at this stage there is no indication
-      // of whether they are logged into the app. If they aren't then they'll see the Login
-      // dialog right after they log in to Facebook. 
-      // The same caveats as above apply to the FB.login() call here.
-      FB.login();
-    }
-  });
-  };
-
-  // Load the SDK asynchronously
-  (function(d){
-   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/en_US/all.js";
-   ref.parentNode.insertBefore(js, ref);
-  }(document));
-
-  // Here we run a very simple test of the Graph API after login is successful. 
-  // This testAPI() function is only called in those cases. 
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Good to see you, ' + response.name + '.');
-    });
-  }
-</script>
-
-<!--
-  Below we include the Login Button social plugin. This button uses the JavaScript SDK to
-  present a graphical Login button that triggers the FB.login() function when clicked.
-
-  Learn more about options for the login button plugin:
-  /docs/reference/plugins/login/ -->
-    <div class="container">
+     <div class="container">
 
       <div class="masthead">
       
-       <table>
+      <table>
         <tr><td><h3 class="muted">SMARTlevel</h3> 
         <div class="span6">
         </td><td>
-
+        <form class="form-inline">
         <div class="span6">
-    <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+ 		<input type="text" class="input-small" placeholder="Email">
+	    <input type="password" class="input-small" placeholder="Password">
+ 	    <label class="checkbox">
+        <input type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="btn">Sign in</button>
+        </form>
         </td></tr>
         </table>
         
@@ -190,35 +120,33 @@
                <li><a href="home.html">Home</a></li>
                 <li><a href="lessons.html">Lessons</a></li>
                 <li class="active"><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="friends.html">About Us</a></li>
+                <li><a href="friends.html">Friends</a></li>
                 <li><a href="rewards.html">Rewards</a></li>
               </ul>
             </div>
           </div>
-        </div>   <!-- /.navbar -->
+        </div>   
      
       </div>
 
-      <!-- Jumbotron -->
+
 
 
       <hr>
 
-      <!-- Example row of columns -->
 
-<!--        <div  class="span12"> 
-        <div class="span12"> -->
 <center>
           <h1 > See How YOU Level Up!</h1>
+          <img src="levelUP.bmp">
 </center>
 <hr>
 
-<!--         <div class="row-fluid">-->
+
        
 <center>
  <div>
-        <div id= "6th Graders" class="span3">
-          <h2>6th Graders</h2>
+        <div id= "Top Monthly Scores" class="span3">
+          <h2>Top Monthly Scores</h2>
           <p>
 
 </p>
@@ -226,8 +154,8 @@
 
 
 
-        <div id= "7th Graders" class="span3">
-          <h2>7th Graders</h2>
+        <div id= "Top Weekly Scores" class="span3">
+          <h2>Top Weekly Scores</h2>
           <p>
 
           </p>
@@ -236,8 +164,8 @@
 
 
 
-      <div id= "8th Graders" class="span3">
-          <h2>8th Graders</h2>
+      <div id= "Top Scores Today" class="span3">
+          <h2>Top Scores Today</h2>
           <p>
 
           </p>
@@ -255,119 +183,8 @@
         var users = [
       
            "obamasMama",
-                   "u_cantseeeMEEE",                   "belieber4lyfe",
-                   "bellydancaaaa",                   "YOUR_MOM_SAYS",                   "pinkLADY",                   "ballerina91",
-                   "GoneFishenn",                   "bluewhales",                   "cheetahrunner",                   "hannahbanana",
-                   "ieatkids",                   "iScratch",                   "uSniff",                   "IMnotTOUCHINGyou",
-                   "IronMan22",                   "Thorrrr",                   "Captain_MURRICA",                   "snorlaximusprime",
-                   "gameJUNKY86",                   "Johhny5",                   "catricks45",                   "meesh",
-                   "cheezluver",                   "smarty2000",         
-                   "chunkymonkeeee",                   "kingchronos","softcuddlyman","summerthyme",
-"rodeopuppy","susanny","yeezus153","stepdan",
-"thefullmonty","garretpeach","kidbroadway","sharkfight",
-"gingerbinger","freeatlast",
-"broadcaster50","baconnotstirred",
-"tacohell","carefreeorphan",
-"truckface","knotranger",
-"esquire55","gfullerton",
-"freddytava","ridethetiger",
-"tadeo1949","kittensonfire",
-"crescenthonkey","avacadoassassin",
-"funkyharrold","biscuitwench",
-"feloniousmonk","captainbuffy",
-"onearmeddwarf","gigglypersian",
-"rwandaphobic","riprihanna",
-"celticwoof","hambone",
-"necessarymeans","sobchaksecurity",
-"tweetmegently","shredsitar",
-"zippoviking","lovestock",
-"theycallmedennis",
-"sibilance","freehat",
-"freshczar","phoneticjustice",
-"madskunky","clownmatrix",
-"agdumble","skizzler",
-"ihavediabetes","preasureplivelege" ,
-"kingdavid724","rougewafflemaker",
-"thermokat","benjamincuttin",
-"soundingpointe",
-"thecubslostagain",
-"dzelonky",
-"stratotone",
-"lutherplayedtheboogie",
-"hopalongryan",
-"kittysezmeowww",
-"brickofcheese",
-"ranchaholic",
-"spincycle",
-"fangletinker",
-"doughnutssgonuts",
-"codchancellor",
-"ihadarash",
-"robojimmy",
-"cowboydan",
-"buckocaster",
-"therichestdon",
-"nos12ay7",
-"tonestack",
-"spuffyjoe",
-"weathervanesalesman",
-"49studebaker",
-"alrokerfanboy",
-"mandiego",
-"rooseveltdime",
-"spiffymcbrownshoes",
-"dualprofessional",
-"biginjapan",
-"notnowmom",
-"avemaria",
-"soccerdogg",
-"leadpaintbaby",
-"lucinda",
-"confypoplar",
-"drjulius",
-"iwenttoartschool",
-"tacticalsloth",
-"chocolatejesus",
-"danamarschz",
-"breakingtad",
-"drugsontoast",
-"loubergs",
-"kiwislice",
-"ameliaeartart",
-"lemonlimewtf",
-"tonyhop",
-"beanswithchee",
-"bjorksucks",
-"illbestan",
-"geebreeze",
-"shooshoe",
-"jesusabs",
-"frontierphysicist",
-"yourbiggestflan",
-"creepyolderman",
-"flanthropist",
-"wackjilshire",
-"montecrisco",
-"napoleonbeard",
-"squattingbearapproves",
-"senortadpole",
-"steveholt",
-"genghislawn",
-"ancientraike",
-"steptothewoo",
-"checkforlumps",
-"smugvegan",
-"zerotalenthack",
-"robertofripp",
-"inky",
-"pinky",
-"blinky",
-"sue",
-"suprozinky",
-"buffhomeless",
-"pelicansdontvote",
-"tweeddeluxe",
-"leeharveyoddball"
+                   "u_cantseeeMEEE",     "belieber4lyfe",   "bellydancaaaa",  "YOUR_MOM_SAYS",  "pinkLADY",  "ballerina91",   "GoneFishenn", "bluewhales",  "cheetahrunner", "hannahbanana",  "ieatkids",   "iScratch",  "uSniff",   "IMnotTOUCHINGyou",   "IronMan22",  "Thorrrr",   "Captain_MURRICA",  "snorlaximusprime","gameJUNKY86","Johhny5",  "catricks45",  "meesh",  "cheezluver",  "smarty2000",  "chunkymonkeeee",  "kingchronos","softcuddlyman","summerthyme","rodeopuppy","susanny","yeezus153","stepdan","thefullmonty","garretpeach","kidbroadway","sharkfight","gingerbinger","freeatlast","broadcaster50","baconnotstirred","tacohell","carefreeorphan","truckface","knotranger","esquire55","gfullerton","freddytava","ridethetiger","tadeo1949","kittensonfire","crescenthonkey","avacadoassassin","funkyharrold","biscuitwench","feloniousmonk","captainbuffy","onearmeddwarf","gigglypersian","rwandaphobic","riprihanna","celticwoof","hambone","necessarymeans","sobchaksecurity","tweetmegently","shredsitar","zippoviking","lovestock","theycallmedennis","sibilance","freehat","freshczar","phoneticjustice","madskunky","clownmatrix","agdumble","skizzler","ihavediabetes","preasureplivelege" ,"kingdavid724","rougewafflemaker","thermokat","benjamincuttin","soundingpointe","thecubslostagain","dzelonky","stratotone","lutherplayedtheboogie","hopalongryan","kittysezmeowww","brickofcheese","ranchaholic","spincycle","fangletinker","doughnutssgonuts","codchancellor","ihadarash","robojimmy","owboydan","buckocaster","therichestdon","nos12ay7","tonestack","spuffyjoe","weathervanesalesman","49studebaker","alrokerfanboy","mandiego","rooseveltdime","spiffymcbrownshoes","dualprofessional","biginjapan","notnowmom","avemaria","soccerdogg","leadpaintbaby","lucinda","confypoplar","drjulius","iwenttoartschool","tacticalsloth","chocolatejesus","danamarschz","breakingtad","drugsontoast","loubergs","kiwislice","ameliaeartart","lemonlimewtf","tonyhop","beanswithchee","bjorksucks","illbestan","geebreeze","shooshoe","jesusabs","frontierphysicist","yourbiggestflan","creepyolderman","flanthropist","wackjilshire","montecrisco","napoleonbeard","squattingbearapproves","senortadpole","steveholt", "genghislawn","ancientraike","steptothewoo","checkforlumps","smugvegan","zerotalenthack","robertofripp","inky","pinky","blinky","sue","suprozinky","buffhomeless",
+"pelicansdontvote","tweeddeluxe","leeharveyoddball"
 
                ]
 
@@ -394,47 +211,11 @@
 
   var gradelevel = ["6th grade", "7th grade", "8th grade"]
 
-            Math.random();
-            var randomNum1 = Math.floor(Math.random()*users.length);
-
-            Math.random();
-            var randomNum2 = Math.floor(Math.random()*users.length);
-
-            Math.random();
-            var randomNum3 = Math.floor(Math.random()*50 + 50);
-
-            Math.random();
-            var randomNum4 = Math.floor(Math.random()*users.length);
-
-            Math.random();
-            var randomNum5 = Math.floor(Math.random()*users.length);
-
-            Math.random();
-            var randomNum6 = Math.floor(Math.random()*users.length);
-
-            Math.random();
-            var randomNum7 = Math.floor(Math.random()*50 + 50);
-
-
-            Math.random();
-            var randomNum8 = Math.floor(Math.random()*50 + 50);
-
-            Math.random();
-            var randomNum9 = Math.floor(Math.random()*50 + 50);
 
 
             Math.random();
             var randomNum10 = Math.floor(Math.random()*10 + 1);
 
-            Math.random();
-            var randomNum11 = Math.floor(Math.random()*users.length);
-
-            var userzero= users[randomNum6]
-            var userone= users[randomNum1]
-            var usertwo= users[randomNum2]
-            var userthree= users[randomNum4]
-            var userfour= users[randomNum5]
-            var userfive= users[randomNum11]
 
             var colors=[ "green", "blue", "purple", "red", "black", "orange", "cyan"
 
@@ -445,65 +226,79 @@
             function printscores()
 
 {
- // <div class="span12">
- 
 
-          //<
-       document.getElementById("6th Graders").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]) + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+       document.getElementById("Top Monthly Scores").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]).bold() + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
 
 
-//h1 style="text-align: center"> printout </h1>
-     //     <p> 
-//
+
+
 }
+
+
+
+    //   document.getElementById("Top Monthly Scores").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]) + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+printscores()
+
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+printscores7()
+
 
             function printscores7()
 
 {
- // <div class="span12">
- 
 
-          //<
-       document.getElementById("7th Graders").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]) + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+       document.getElementById("Top Weekly Scores").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]).bold()  + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
 
 
-//h1 style="text-align: center"> printout </h1>
-     //     <p> 
-//
+
 }
 
             function printscores8()
 
 {
- // <div class="span12">
- 
 
-          //<
-       document.getElementById("8th Graders").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]) + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
+       document.getElementById("Top Scores Today").innerHTML+='<p>' + users[Math.floor(Math.random()*users.length)].fontcolor(colors[Math.floor(Math.random()*colors.length)]).bold()  + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + randomNum10+ ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + ' ' +exams[Math.floor(Math.random()*exams.length)] + '. </p></div>' 
 
-//h1 style="text-align: center"> printout </h1>
-     //     <p> 
-//
+
 }
-/// inside a div getelementbyid(idyougivethediv).innerHTML+="everythingin the document.write"
-
-
-        //<div class="span12">
-
-     //     <h1 style="text-align: center"> printout</h1>
-         
-
-
-//h1 style="text-align: center"> printout </h1>
-     //     <p> 
-
-/*      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) 
-
-      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) 
-
-      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) 
-
-      document.write('<p>' + users[Math.floor(Math.random()*users.length)] + ' just scored ' + scores[Math.floor(Math.random()*scores.length)] + '  points on test ' + testno[Math.floor(Math.random()*testno.length)] + ' in ' + gradelevel[Math.floor(Math.random()*gradelevel.length)] + exams[Math.floor(Math.random()*exams.length)] + '. </p>' ) */
 
 
 
@@ -513,27 +308,6 @@
 
 
 
-
-
-//            function reloadPage()
-  //          {
-    //         location.reload()
-      //      }
-
-
- //         function jQuery(#sixthgraders).load
-
-
-
- //           window.setTimeout(reloadPage(),30000);   works but does it waaay too fast
-  //        function jQuery.reload(sixthgraders)
- //         setTimeout(jQuery('#sixthgraders').load(),3000,JScript)
-
-
- //         jQuery('#questions').load('/some_url #questions > *');
-
-
-            //^^this creates a time delay between 0.5 to 3 seconds
 
  var counter = 0;
  
@@ -547,8 +321,8 @@
              {
                if (counter < 20)
                {
-               printscores()
-               printscores7()
+              // printscores()
+               //printscores7()
                printscores8()
                setTimeout(function(){myTimer()},Math.floor(Math.random()*2500) + 500);
 
@@ -560,24 +334,6 @@
 }
 
 
-/*            function myTimer()
-            {
-             var uzone=document.getElementById(userone);
-             uzone.innerHTML=userzero;
-
-             var uztwo=document.getElementById(usertwo);
-             uztwo.innerHTML=userone;
-             
-             var uzthree=document.getElementById(userthree);
-             uzthree.innerHTML=usertwo;
-             
-             var uzfour=document.getElementById(userfour);
-             uzfour.innerHTML=userthree;
-             
-             var uzfive=document.getElementById(userfive);
-             uzfive.innerHTML="userfour";
-            }*/
-                    
 
 
 
@@ -586,59 +342,10 @@
         </script>
       
 </hr>
-<!-- 
 
-          </p>
-
-
-
-
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-
-        
-        <div class="span4">
-          <h2>7th Graders</h2>
-          <p>
-
-
-
-
-           </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>8th Graders</h2>
-          <p>
-
-
-
-          </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr>
- -->
 
      <hr>
-<!-- <div class="footer">
-        <p>&copy; SMARTlevel 2013</p>
-      </div> 
-</hr> -->
 
-<!-- <footer>
-  <p>SMARTlevel 2013</p>
-
-</footer> -->
-
-
-
- <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/js/jquery.js"></script>
     <script src="bootstrap/js/bootstrap-transition.js"></script>
     <script src="bootstrap/js/bootstrap-alert.js"></script>
